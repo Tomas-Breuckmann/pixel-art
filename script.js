@@ -11,3 +11,18 @@ function quadroDePixel(numero){
     }
 }
 quadroDePixel(5)
+
+
+
+function selecionaCor(event){
+    let aCor=document.querySelector('.selected')
+    console.log(aCor)
+    aCor.classList.remove('selected')
+    event.target.classList.add('selected')
+    console.log(aCor)
+}
+
+document.getElementById('cor1').addEventListener('click',selecionaCor)
+document.getElementById('cor2').addEventListener('click',selecionaCor)
+document.getElementById('cor3').addEventListener('click',selecionaCor)
+document.getElementById('cor4').addEventListener('click',selecionaCor)
