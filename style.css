@@ -4,8 +4,9 @@
 .color{border:1px solid black; display: inline-block; width: 25px;height: 25px;}
 #pixel-board{text-align: center; margin: 0 auto;line-height: 0;}
 .pixel{border:1px solid black; display: inline-block; width: 40px;height: 40px; background-color: white;}
-#cor1{background-color: black;}
-#cor2{background-color: red;}
+/* #cor1{background-color: black;}
+#cor2{background-color: rgb(255, 0, 0);}
 #cor3{background-color: blue;}
-#cor4{background-color: yellow;}
+#cor4{background-color: yellow;} */
 #opcoes{text-align: center; margin: 15px;}
+.selected{border: 100%;}

@@ -1,12 +1,14 @@
-// window.onload=function(){
-//     function pintaBlack(event){
-//         let pix=document.getElementById('pixel-board')
-//         pix.addEventListener('click',function(event){
-//             event.target.style.backgroundColor='black'
-//         })
-//     }
-//     pintaBlack()
-// }
+window.onload=function(){
+    let x=[]
+    for(let j=2;j<=4;j+=1){
+    for(let i=0;i<3;i+=1){
+        x[i]=Math.floor(Math.random()*255)
+    }
+    let cor ='rgb('+x[0]+','+x[1]+','+x[2]+')'
+    document.getElementById('cor'+j).style.backgroundColor=cor
+    }
+    document.getElementById('cor1').style.backgroundColor='black'
+}
 
 //Limpa o quadro de pixels
 
@@ -41,8 +43,8 @@ document.getElementById('cor4').addEventListener('click',selecionaCor)
 const pixels = document.querySelectorAll('.pixel');
 for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].addEventListener('click', function(event) {
-        let propriedades=document.querySelector('.selected').id
-        event.target.id = propriedades;
+        let propriedades=document.querySelector('.selected').style.backgroundColor
+        event.target.style.backgroundColor = propriedades;
     })
 }
 
