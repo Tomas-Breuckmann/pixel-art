@@ -10,13 +10,10 @@ window.onload=function(){
     document.getElementById('cor1').style.backgroundColor='black'
 }
 
-//Limpa o quadro de pixels
-
-
+//Gera o quadro de pixels
 function quadroDePixel(numero){
     let board=document.getElementById('pixel-board')
     let boardSize=numero*42
-    console.log(boardSize)
     board.style.width=boardSize+'px'
     board.style.height=boardSize+'px'
     for (let i=0;i<numero;i+=1){
@@ -39,7 +36,7 @@ document.getElementById('cor2').addEventListener('click',selecionaCor)
 document.getElementById('cor3').addEventListener('click',selecionaCor)
 document.getElementById('cor4').addEventListener('click',selecionaCor)
 
-// As linhas 36 a 43 são de Danillo Goncalves Batista
+// As próximas 7 linhas são adaptadas de um código de Danillo Goncalves Batista
 const pixels = document.querySelectorAll('.pixel');
 for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].addEventListener('click', function(event) {

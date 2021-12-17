@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <!-- início do header -->
     <!-- contem o titulo e a paleta de cores inicial -->
     <header>
@@ -22,13 +23,21 @@
         </nav>
     </header>
     <!-- fim do header -->
+
+    <!-- inicio dos botoes e inputs -->
     <section id="opcoes">
-        <button id="clear-board" onclick="limpaQuadro()">Limpar</button>
+        <div class="caixa">
+            <button id="clear-board" onclick="limpaQuadro()">Limpar</button>
+        </div>
+        <div class="caixa">
+            <button id="generate-board">VQV</button>
+            <input type="number" id="board-size">
+        </div>
     </section>
+    <!-- Fim dos botões e inputs -->
+
     <!-- Inicio do quadro de pixels -->
-    <main id="pixel-board">
-        
-    </main>
+    <main id="pixel-board"></main>
     <!-- fim do quadro de pixels -->
 
     <script src="script.js"></script>

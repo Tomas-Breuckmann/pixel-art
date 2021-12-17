@@ -10,3 +10,4 @@
 #cor4{background-color: yellow;} */
 #opcoes{text-align: center; margin: 15px;}
 .selected{border: 100%;}
+.caixa{padding: 5px;  display: inline-block; border: 1px solid black; margin: 0 10px;}
