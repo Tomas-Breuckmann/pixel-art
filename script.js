@@ -8,10 +8,15 @@
 //     pintaBlack()
 // }
 
+//Limpa o quadro de pixels
+
+
 function quadroDePixel(numero){
     let board=document.getElementById('pixel-board')
-    board.style.width='210px'
-    board.style.height='210px'
+    let boardSize=numero*42
+    console.log(boardSize)
+    board.style.width=boardSize+'px'
+    board.style.height=boardSize+'px'
     for (let i=0;i<numero;i+=1){
         for (j=1;j<=numero;j+=1){
             let item=document.createElement('div')
@@ -35,8 +40,15 @@ document.getElementById('cor4').addEventListener('click',selecionaCor)
 // As linhas 36 a 43 são de Danillo Goncalves Batista
 const pixels = document.querySelectorAll('.pixel');
 for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].addEventListener('click', function(e) {
+    pixels[i].addEventListener('click', function(event) {
         let propriedades=document.querySelector('.selected').id
-        e.target.id = propriedades;
+        event.target.id = propriedades;
     })
 }
+
+function limpaQuadro(){
+    let pixels = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixels.length; i += 1) {
+        pixels[i].style.backgroundColor='white'
+        }
+    }
