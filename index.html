@@ -30,8 +30,8 @@
             <button id="clear-board" onclick="limpaQuadro()">Limpar</button>
         </div>
         <div class="caixa">
-            <button id="generate-board">VQV</button>
-            <input type="number" id="board-size">
+            <input type="number" id="board-size" min="1" max="50" placeholder="Digite um valor entre 5 e 50">
+            <button id="generate-board" onclick="novoQuadro()">VQV</button>
         </div>
     </section>
     <!-- Fim dos botões e inputs -->

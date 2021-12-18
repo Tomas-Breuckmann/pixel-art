@@ -37,6 +37,7 @@ document.getElementById('cor3').addEventListener('click',selecionaCor)
 document.getElementById('cor4').addEventListener('click',selecionaCor)
 
 // As próximas 7 linhas são adaptadas de um código de Danillo Goncalves Batista
+function marcaPixels(){
 const pixels = document.querySelectorAll('.pixel');
 for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].addEventListener('click', function(event) {
@@ -44,6 +45,8 @@ for (let i = 0; i < pixels.length; i += 1) {
         event.target.style.backgroundColor = propriedades;
     })
 }
+}
+marcaPixels()
 
 function limpaQuadro(){
     let pixels = document.querySelectorAll('.pixel');
@@ -51,3 +54,22 @@ function limpaQuadro(){
         pixels[i].style.backgroundColor='white'
         }
     }
+
+// Gera um quadro de pixels com o tamanho definido pelo usuário
+function novoQuadro(){
+    //  remove o quadro atual
+    let itens=document.getElementsByClassName('pixel')
+    for(let i=itens.length-1;i>=0;i-=1){
+        itens[i].parentNode.removeChild(itens[i])
+    }
+    // cria um novo quadro de pixels
+    let numero=document.getElementById('board-size').value
+    console.log(numero)
+    if(numero==false){
+        alert('Board inválido!')
+    } else {
+        quadroDePixel(numero)
+        // marca cada quadrado para que possa ser pintado
+        marcaPixels()
+    }
+}
