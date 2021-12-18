@@ -68,6 +68,11 @@ function novoQuadro(){
     if(numero==false){
         alert('Board inválido!')
     } else {
+        if(numero<5) {
+            numero=5
+        } else if(numero>50){
+            numero =50
+        }
         quadroDePixel(numero)
         // marca cada quadrado para que possa ser pintado
         marcaPixels()
